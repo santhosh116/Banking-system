@@ -11,7 +11,7 @@ int findDifference(string lastDate) {
   struct tm date = {0}; //tm is the in-built structure used to handle date
   int interval; 
   time_t current; // The current time
-  time_t normal; // The time at the date of birth of the person
+  time_t normal; // The time of the date mentioned in the function argument
   strcpy(char_array, lastDate.c_str()); //copy the string to c type char array  
   ptr = strtok(char_array, "-"); // string tokenize to find the date
   date.tm_mday = boost::lexical_cast<int>(ptr); //type conversion from char array to int // c type conversion don't work for char[] to int conversion so lexical_cast is used
